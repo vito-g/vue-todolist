@@ -12,7 +12,8 @@ Vi lascio un esempio di todolist.*/
 var app = new Vue({
  el: '#root',
  data: {
-   text: 'testo'
+   text: 'testo',
+   toDoList: []
  }
 });
 Vue.config.devtools = true;
