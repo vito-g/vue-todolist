@@ -19,10 +19,13 @@ body {
 }
 
 .display-list {
-  /* border-bottom: 1px solid black; */
+  /* border-top: 1px solid black; */
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: black;
+  color: white;
+
 }
 
 input {
