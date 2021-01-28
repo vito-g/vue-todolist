@@ -14,6 +14,11 @@ var app = new Vue({
  data: {
    text: 'testo',
    toDoList: []
+ },
+ methods: {
+   submitFx: function() {
+     this.toDoList.push(this.text);
+   }
  }
 });
 Vue.config.devtools = true;

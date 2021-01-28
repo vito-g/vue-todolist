@@ -4,15 +4,12 @@
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript">
-
-    </script>
     <title>Vue ToDo List</title>
   </head>
   <body>
 
     <div id="root">
-      <input v-model="text">
+      <input v-model="text" @keyup.enter="submitFx" value="text">
       <p>{{text}}</p>
 
     </div>
