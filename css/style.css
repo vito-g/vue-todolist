@@ -7,3 +7,52 @@
 body {
   /* background-color: red; */
 }
+
+#root {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.display {
+  padding-top: 20px;
+}
+
+.display-list {
+  /* border-bottom: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+input {
+  width: 79%;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 1.5px 1.5px 1.5px grey;
+  border: none;
+}
+
+li {
+  /* list-style: none; */
+  display: inline-block;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+button {
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  border-style: none;
+  box-shadow:1.5px 1.5px 1.5px grey;
+  background-color: white;
+}
+
+
+
+i .fas {
+ vertical-align: bottom;
+}

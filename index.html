@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Vue ToDo List</title>
   </head>
@@ -13,13 +15,14 @@
     <div id="root">
       <input v-model="text" @keyup.enter="submitFx" value="text" placeholder="thing to do">
       <button @click="submitFx">Aggiungi</button>
-      <ul>
-        <div v-for="(item, index) in toDoList" class="display-list" @click="rejectFx(index)">
-          <li >{{item}}
+      <div class="display">
+        <ul>
+          <div v-for="(item, index) in toDoList" class="display-list" @click="rejectFx(index)">
+            <li >- {{index}} - {{item}}</li>
             <i class="fas fa-times" ></i>
-          </li>
-        </div>
-      </ul>
+          </div>
+        </ul>
+      </div>
     </div>
     <!-- END Div di visualizzazione di Vue -->
 
