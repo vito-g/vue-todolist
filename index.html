@@ -12,6 +12,9 @@
     <div id="root">
       <input v-model="text" @keyup.enter="submitFx" value="text">
       <button @click="submitFx">SUBMIT</button>
+      <ul>
+        <li v-for="item in toDoList">{{item}}</li>
+      </ul>
     </div>
     <!-- END Div di visualizzazione di Vue -->
 
