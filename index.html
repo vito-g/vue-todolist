@@ -14,9 +14,9 @@
       <input v-model="text" @keyup.enter="submitFx" value="text" placeholder="thing to do">
       <button @click="submitFx">Aggiungi</button>
       <ul>
-        <div v-for="item in toDoList" class="display-list">
+        <div v-for="(item, index) in toDoList" class="display-list" @click="rejectFx(index)">
           <li >{{item}}
-            <i class="fas fa-times"></i>
+            <i class="fas fa-times" ></i>
           </li>
         </div>
       </ul>

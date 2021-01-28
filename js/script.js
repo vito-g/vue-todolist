@@ -13,11 +13,16 @@ new Vue({
  el: '#root',
  data: {
    text: '',
-   toDoList: []
+   toDoList: [],
+   index: 0
  },
  methods: {
    submitFx: function() {
      this.toDoList.push(this.text);
+     this.text = '';
+   },
+   rejectFx: function(item,i) {
+     this.toDoList.splice(index,1);
      this.text = '';
    }
  }
