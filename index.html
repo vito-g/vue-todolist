@@ -11,8 +11,8 @@
 
     <!-- Div di visualizzazione di Vue -->
     <div id="root">
-      <input v-model="text" @keyup.enter="submitFx" value="text">
-      <button @click="submitFx">SUBMIT</button>
+      <input v-model="text" @keyup.enter="submitFx" value="text" placeholder="thing to do">
+      <button @click="submitFx">Aggiungi</button>
       <ul>
         <div v-for="item in toDoList" class="display-list">
           <li >{{item}}

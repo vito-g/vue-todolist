@@ -9,10 +9,10 @@ lavorate lato CSS, per rendere la todolist più carina seguendo la vostra creati
 Vi lascio un esempio di todolist.*/
 
 
-var app = new Vue({
+new Vue({
  el: '#root',
  data: {
-   text: 'testo',
+   text: '',
    toDoList: []
  },
  methods: {
