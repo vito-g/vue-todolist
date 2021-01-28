@@ -21,7 +21,7 @@ new Vue({
      this.toDoList.push(this.text);
      this.text = '';
    },
-   rejectFx: function(item,i) {
+   rejectFx: function(index) {
      this.toDoList.splice(index,1);
      this.text = '';
    }
