@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Vue ToDo List</title>
   </head>
@@ -13,7 +14,11 @@
       <input v-model="text" @keyup.enter="submitFx" value="text">
       <button @click="submitFx">SUBMIT</button>
       <ul>
-        <li v-for="item in toDoList">{{item}}</li>
+        <div v-for="item in toDoList" class="display-list">
+          <li >{{item}}
+            <i class="fas fa-times"></i>
+          </li>
+        </div>
       </ul>
     </div>
     <!-- END Div di visualizzazione di Vue -->
