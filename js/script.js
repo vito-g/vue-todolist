@@ -18,6 +18,7 @@ new Vue({
  methods: {
    submitFx: function() {
      this.toDoList.push(this.text);
+     this.text = '';
    }
  }
 });
