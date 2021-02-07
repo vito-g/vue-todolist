@@ -15,6 +15,7 @@
     <div id="root">
       <input v-model="text" @keyup.enter="submitFx" value="text" placeholder="thing to do">
       <button @click="submitFx">Aggiungi</button>
+      <span v-if="activeWarning == true">{{warning}}</span>
       <div class="display">
         <ul>
           <div v-for="(item, index) in toDoList" class="display-list">

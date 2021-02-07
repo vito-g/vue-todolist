@@ -14,12 +14,21 @@ new Vue({
  data: {
    text: '',
    toDoList: [],
-   index: 0
+   index: 0,
+   warning: '',
+   activeWarning: false
  },
  methods: {
    submitFx: function() {
-     this.toDoList.push(this.text);
-     this.text = '';
+     if (this.text !== '') {
+       this.toDoList.push(this.text);
+       this.text = '';
+       this.warning = '';
+     }
+     else {
+         this.activeWarning = true;
+         this.warning= 'valore non valido!';
+     }
    },
    rejectFx: function(index) {
      this.toDoList.splice(index,1);
