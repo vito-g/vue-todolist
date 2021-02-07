@@ -19,7 +19,7 @@
         <ul>
           <div v-for="(item, index) in toDoList" class="display-list">
             <li >- {{index + 1}} - {{item.charAt(0).toUpperCase() + item.slice(1)}}</li>
-            <i class="fas fa-times" @click="rejectFx(index)"></i>
+            <i class="fas fa-times cursor-pointer" @click="rejectFx(index)"></i>
           </div>
         </ul>
       </div>
