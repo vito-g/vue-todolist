@@ -17,9 +17,9 @@
       <button @click="submitFx">Aggiungi</button>
       <div class="display">
         <ul>
-          <div v-for="(item, index) in toDoList" class="display-list" @click="rejectFx(index)">
-            <li >- {{index}} - {{item.charAt(0).toUpperCase() + item.slice(1)}}</li>
-            <i class="fas fa-times" ></i>
+          <div v-for="(item, index) in toDoList" class="display-list">
+            <li >- {{index + 1}} - {{item.charAt(0).toUpperCase() + item.slice(1)}}</li>
+            <i class="fas fa-times" @click="rejectFx(index)"></i>
           </div>
         </ul>
       </div>
