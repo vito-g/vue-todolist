@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Choose A Color For Me - (RGB)OK</title>
+  </head>
+  <body>
+
+
+    <div id="root">
+
+
+      <button id="fixed" class="cursor-pointer" type="button" @click="boxColorRandomFx" name="button">
+        Please, <strong>choose a color</strong> for me
+      </button>
+      <div class="container clearfix">
+        <div class="box fl" v-for="(element,index) in colorArray" v-bind:style="'background-color:' + colorArray[index]">
+          <input type="text" v-model="colorArray[index]" v-bind:style="'color:' + colorDataInvArray[index]" @keyup.enter="filteredArrayFx(index)">
+          <div class="baloon display" v-bind:style="'color:' + colorDataInvArray[index]">
+            try to <strong>change</strong><br><strong>rgb </strong>values. <br> <strong> enter</strong> to<strong> select</strong>
+          </div>
+          <i class="fas fa-times cursor-pointer" @click="rejectFx(index)" v-bind:style="'color:' + colorDataInvArray[index]"></i>
+        </div>
+      </div>
+      <!-- Qui di seguito è pronta la Struttura ancora Vuota della Palette di Colori Personalizzata. Sarà Renderizzata all'Occorrenza; quando la Palette sarà Creata dall'Utente con le sue Scelte. -->
+      <div class="separator" v-if="colorPaletteChoosen == true">
+        <span>
+          Qui di seguito la
+          <strong>
+            Palette Colori
+          </strong>
+            da te <strong>Creata</strong>
+            <img :src="picture" v-bind:style="'width: 25px'"></img>
+        </span>
+      </div>
+      <div class="box fl" v-for="(element,index) in filteredArrayFromInput" v-if="colorPaletteChoosen == true" v-bind:style="'background-color:' + filteredArrayFromInput[index]">
+        <input type="text" v-model="filteredArrayFromInput[index]">
+        <div class="baloon display" >
+          try to <strong>change</strong><br><strong>rgb </strong>values. <br> <strong> enter</strong> to<strong> select</strong>
+        </div>
+        <i class="fas fa-times cursor-pointer" @click="rejectFxFiltered(index)"></i>
+      </div>
+
+
+    </div>
+
+
+    <script src="js/script.js" charset="utf-8"></script>
+
+  </body>
+</html>

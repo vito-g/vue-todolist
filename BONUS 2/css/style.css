@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.fl {
+  float: left;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* body {
+  background-image: url('../img/abstract-a.jpg');
+  background-size: cover;
+} */
+
+#root {
+}
+
+.container {
+  width: 100%;
+  /* height: calc(100vh); */
+  /* border: 19.2px solid  black; */
+}
+
+.display {
+  display: none;
+}
+
+button {
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255,255,255,0.75);
+  color: black;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 17px;
+  z-index: 1;
+  box-shadow:  5px 5px 5px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  transform: scale(0.1);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+#fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.box {
+  width: calc(100% / 8);
+  height:calc(100vh / 8);
+  border: 1px solid white;
+  line-height: calc(100vh / 8);
+  text-align: center;
+  color: white;
+  /* font-family: sans-serif; */
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  position: relative;
+}
+.separator {
+  width: 100%;
+  height:calc(100vh / 8);
+  background-color: grey;
+  text-align: center;
+}
+
+.separator > span {
+  line-height: calc(100vh / 8);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 10px;
+  color: white;
+  display: inline-block;
+  position: relative;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.box:hover {
+  /* border-color: black; */
+  transform: scale(0.98);
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  color: black;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.baloon {
+  display: none;
+  padding: 5px;
+  background-color: white;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  /* border: 1px solid black; */
+  z-index: 1;
+  color: white;
+  text-align: left;
+  line-height: 100%;
+  border-radius: 0 7px 7px 7px;
+  box-shadow:  1.5px 1.5px 1.5px rgba(0,0,0,0.2);
+}
+
+.box:hover .baloon{
+ display: block;
+ background-color: rgba(255,255,255,0.2);
+}

@@ -27,7 +27,7 @@ new Vue({
      }
      else {
          this.activeWarning = true;
-         this.warning= 'valore non valido!';
+         this.warning= '*valore non valido!';
      }
    },
    rejectFx: function(index) {
